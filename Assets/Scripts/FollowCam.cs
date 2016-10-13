@@ -4,6 +4,8 @@ using System.Collections;
 public class FollowCam : MonoBehaviour
 {
     static public FollowCam S; // a FollowCam Singleton 
+
+
     //fields are set in the unity Inspector pane 
     public float      easing = 0.05f;
     public Vector2    minXY;
@@ -11,7 +13,7 @@ public class FollowCam : MonoBehaviour
 
     // fields set dynamically 
     public GameObject poi; //the point of interest 
-    public float camZ;// The desired Z pos of the camera 
+    public float     camZ; // The desired Z pos of the camera 
 
 
     void Awake()
@@ -21,14 +23,8 @@ public class FollowCam : MonoBehaviour
     }
 
 
-
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
+
     void FixedUpdate() {
         //if there's only one line following an if, it doesn't need braces 
         if (poi == null) return; // return if there is no poi
