@@ -30,7 +30,7 @@ public class CloudCrafter : MonoBehaviour {
             //Random .Range will not eveer pick as high as the top number 
             int prefabNum = Random.Range( 0, cloudPrefabs.Length);
             //Make and instance
-            cloud = Instantiate(cloudPrefabs[prefabNum]) as GameObject;
+            cloud = Instantiate( cloudPrefabs[prefabNum]) as GameObject;
             //Position cloud 
             Vector3 cPos = Vector3.zero;
             cPos.x = Random.Range(cloudPosMin.x, cloudPosMax.x);
