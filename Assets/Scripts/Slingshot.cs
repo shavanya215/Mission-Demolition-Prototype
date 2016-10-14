@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class Slingshot : MonoBehaviour {
+    static public        Slingshot S;
     public GameObject    prefabProjectile;
     public float         velocityMult = 4f;
     public bool          _________________________________; 
@@ -14,6 +15,8 @@ public class Slingshot : MonoBehaviour {
 
 	// Use this for initialization
     void Awake () {
+        // Set this Slingshot singleton S
+        S = this;
         Transform launchPointTrans = transform.Find("LaunchPoint");
         launchPoint = launchPointTrans.gameObject;
         launchPoint.SetActive(false);
